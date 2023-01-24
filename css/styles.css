@@ -116,25 +116,24 @@ body{
 }
 .nav{
     display: flex;
-
-}
-.site-nav{
-    display: flex;
     margin-left: 76px;
 }
-@media screen and (max-width:767px){
-    .site-nav{
-        display: none;
-    }
-}
 @media screen and (min-width:768px){
-    .site-nav{
+    .nav{
         margin-right: 118px;
     }
 }
 @media screen and (min-width:1200px){
-    .site-nav{
+    .nav{
         margin-right: 0;
+    }
+}
+.site-nav{
+    display: flex;
+}
+@media screen and (max-width:767px){
+    .site-nav{
+        display: none;
     }
 }
  .title-nav{
@@ -234,8 +233,8 @@ body{
     }
 }
 .hero{
-    padding-top: 192px;
-    padding-bottom: 192px;
+    padding-top: 112px;
+    padding-bottom: 112px;
     text-align: center;
     font-weight: 700;
     font-size: 16px;
@@ -247,9 +246,20 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 1600px;
-    height: 600px;
     margin: 0 auto;
 
+}
+@media screen and (min-width:768px){
+    .hero{
+        padding-bottom: 108px;
+    }
+}
+@media screen and (min-width:1200px){
+    .hero{
+        padding-top: 188px;
+        padding-bottom: 188px;
+        max-height: 600px;
+    }
 }
 @media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen  and (min-resolution: 192dpi), screen and (min-resolution: 2dppx){
     .hero{
@@ -524,6 +534,9 @@ body{
     border-radius: 0px 0px 4px 4px;
     
 }
+.team-list:last-child{
+    margin-bottom: 0;
+}
 .team-thumb{
     text-align: center;
     padding: 32px 16px;
@@ -615,8 +628,13 @@ body{
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: var(--gap72) var(--gap24);
+    gap: var(--gap72) var(--gap16);
     justify-content: center;
+}
+@media screen and (min-width:768px){
+    .customers-list{
+        gap: var(--gap72) var(--gap24);
+    }
 }
 @media screen and (min-width:1200px){
     .customers-list{
@@ -625,7 +643,7 @@ body{
 }
 .customers-icon{
     height: 88px;
-    width: 168px;
+    width: 190px;
     border: 1px solid var(--customers-icon);
     border-radius: 4px;
     display: flex;
@@ -635,6 +653,11 @@ body{
     transition: border var(--duration-timing);
 
     
+}
+@media screen and (min-width:768px){
+    .customers-icon{
+        width: 168px;
+    }
 }
 .customers-icons{
     fill: var(--customers-icon);
@@ -833,7 +856,6 @@ body{
     color: var(--button);
 }
 .logo-text{
-    margin-bottom: 72px;
     width:268px;
     font-size: 16px;
     line-height: 1.5;
@@ -846,11 +868,12 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 72px;
+    margin-bottom: 72px;
 } 
 @media screen and (min-width:768px){
     .footer-text{
         align-items: start;
+        margin-bottom: 0;
     }
 }
 @media screen and (min-width:1200px){
@@ -882,6 +905,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    margin-bottom: 72px;
 }
 @media screen and (min-width:768px){
     .footer-content{
@@ -892,6 +917,7 @@ body{
 @media screen and (min-width: 1200px){
     .footer-content{
         margin-right: 120px;
+        margin-bottom: 0;
     }
 }
 
